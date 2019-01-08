@@ -1,0 +1,15 @@
+body{
+  background-color: #000; 
+  color: #fff;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(255, 0, 0);
+}
+
+body form{
+  margin: 100px;
+}
