@@ -13,3 +13,6 @@ a:hover{
 body form{
   margin: 100px;
 }
+th{
+  color: blueviolet;
+}
