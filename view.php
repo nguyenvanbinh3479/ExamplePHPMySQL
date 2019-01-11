@@ -32,6 +32,7 @@
         $result = mysqli_query($dbc, $query);
         $i = 0;
         while($row = mysqli_fetch_array($result)){
+          $id = $row['user_id'];
           $name = $row['user_name'];
           $email = $row['user_email'];
           $image = $row['user_image'];
@@ -44,13 +45,24 @@
         <td><?php echo $email;?></td>
         <td><img src="images/<?php echo $image;?>" alt="" width="50" height="50"></td>
         <td><?php echo $birthday;?></td>
-        <td><a href=".php">Edit</a></td>
-        <td><a href=".php">Delete</a></td>
+        <td><a href="edit_user.php?id=<?php echo $id;?>">Edit</a></td>
+        <td><a href="view.php?id=<?php echo $id;?>">Delete</a></td>
       </tr>
       <?php
         }
       ?>
     </table>
     <center><h3>Logout <a href="logout.php">Here</a></h3></center>
+    <?php
+      if (isset($_GET['id'])){
+        $get_id = $_GET['id'];
+        $delete = "DELETE FROM register_user WHERE user_id='$get_id'";
+        $run = mysqli_query($dbc, $delete);
+        if ($run){
+          echo "<script>alert('delete successfully!')</script>";
+          echo "<script>window.open('view.php', '_self')</script>";
+        } 
+      }
+    ?>
   </body>
 </html>

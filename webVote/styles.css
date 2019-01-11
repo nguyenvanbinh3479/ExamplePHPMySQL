@@ -1,0 +1,36 @@
+body{
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+#con {
+  margin: auto;
+  width: 1000px;
+  padding: 10px;
+  background-color: blueviolet;
+}
+
+#players{
+  width: 1000px;
+  margin: auto;
+}
+#players img{
+  border: 3px solid orange;
+  border-radius: 100%;
+  padding: 3px;
+  margin: 20px;
+}
+h2{
+  color: #fff;
+}
+
+form input {
+  padding: 10px;
+  margin: 10px;
+}
+p{
+  color: #fff;
+  padding: 10px;
+  width: 400px;
+  background-color: #000;;
+}
